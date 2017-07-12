@@ -2,9 +2,7 @@
 <html lang="ru">
 <head>
    <meta charset="utf-8">
-   <!-- для того щоб ІЄ8 ігнорив совмєстімость з ІЄ7,6,5 -->
    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-   <!-- endof -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Ecar</title>
    <meta name="keywords" content="">
@@ -12,11 +10,7 @@
    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-   <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:300,300i,400,400i,500&amp;subset=cyrillic" rel="stylesheet"> -->
-
-   <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"> -->
-
+   <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
    <!--[if lt IE 9]>
    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
    <![endif]-->
@@ -35,7 +29,7 @@
          </div>
       </div>
       <div class="header-contact">
-         <a href="javascript:void(0);" class="header-button g-btn">Заказать звонок</a>
+         <a href="#call-to" class="fancybox header-button g-btn">Заказать звонок</a>
          <a href="tel:89041629394" class="header-phone">8 (904) 162 93 94</a>
       </div>
    </div> 
@@ -46,7 +40,7 @@
       <div class="hero-caption">
          <h1 class="hero-title">Хотите зарабатывать ежемесячно<br> от 100000 до 120000 рублей<br> на собственном авто?</h1>
          <p class="hero-text">Именно столько в среднем зарабатывают наши активные водители, работая в компании с мировым именем - “UBER”.</p>
-         <a href="javascript:void(0);" class="g-btn g-btn__main">Узнать секрет</a>
+         <a href="#secret" class="fancybox g-btn g-btn__main">Узнать секрет</a>
       </div>
    </div>
 </section>
@@ -77,21 +71,21 @@
             <div class="scheme-item">
                <img src="img/i-have-car.png" alt="У меня есть авто и я хочу работать на нём">
                <span class="item__descr">У меня есть авто и я хочу работать на нём</span>
-               <a href="" class="g-btn g-btn__scheme">Выбрать</a>
+               <a href="#scheme__auto" class="fancybox g-btn g-btn__scheme">Выбрать</a>
             </div>
          </div>
          <div class="col-md-4">
             <div class="scheme-item">
                <img src="img/i-want-to-work.png" alt="У меня нет своего авто, но я хочу работать в Uber">
                <span class="item__descr">У меня нет своего авто, но я хочу работать в Uber</span>
-               <a href="" class="g-btn g-btn__scheme">Выбрать</a>
+               <a href="#scheme__work" class="fancybox g-btn g-btn__scheme">Выбрать</a>
             </div>
          </div>
          <div class="col-md-4">
             <div class="scheme-item">
                <img src="img/car-for-rent.png" alt="Я хотел бы сдавать свою машину в аренду">
                <span class="item__descr">Я хотел бы сдавать свою машину в аренду</span>
-               <a href="" class="g-btn g-btn__scheme">Выбрать</a>
+               <a href="#scheme__rent" class="fancybox g-btn g-btn__scheme">Выбрать</a>
             </div>
          </div>
       </div>
@@ -206,13 +200,12 @@
          <div class="col-md-5">
             <div class="questions-info">
                <h2 class="questions-title__form">Остались вопросы?</h2>
+               
                <form class="questions-form">
                   <span>Просто заполните форму ниже:</span>
                   <label><input type="text" name="name" placeholder="Ваше имя" class="g-input" required="required"></label>
                   <label><input type="text" name="phone" placeholder="Телефон" class="g-input" required="required"></label>
-
                   <div class="check-item">
-                     
                      <label>
                         <input type="checkbox" class="g-checkbox">
                         <span>Нажимая на кнопку ЗАКАЗАТЬ ЗВОНОК, я даю 
@@ -220,9 +213,9 @@
                         </span>
                      </label>
                   </div>
-
                   <label><button type="submit" class="g-btn">Заказать звонок</button></label>
                </form>
+
             </div>
          </div>
       </div>
@@ -318,12 +311,110 @@
 </div>
 <!-- Footer end -->
 
+<!-- Popup begin -->
+<section class="all-popups hidden">
+   <div id="secret" class="popup popup-call">
+      <div class="popup-img">
+         <img src="img/secret.png" alt="Узнать секрет">
+      </div>
+      <div class="popup-info">
+         <h2>Узнать секрет?</h2>
+         <form class="questions-form">
+            <span>Просто заполните форму ниже:</span>
+            <label><input type="text" name="name" placeholder="Ваше имя" class="g-input" required="required"></label>
+            <label><input type="text" name="phone" placeholder="Телефон" class="g-input" required="required"></label>
+            <div class="check-item">
+               <label>
+                  <input type="checkbox" class="g-checkbox">
+                  <span>Нажимая на кнопку ЗАКАЗАТЬ ЗВОНОК, я даю 
+                     <a href="javascript:void(0);">согласие на обработку персональных данных *</a>
+                  </span>
+               </label>
+            </div>
+            <label><button type="submit" class="g-btn">Заказать звонок</button></label>
+         </form>
+      </div>
+   </div>
+
+   <div id="call-to" class="popup popup-call">
+      <div class="popup-img">
+         <img src="img/call.png" alt="Заказать звонок">
+      </div>
+      <div class="popup-info">
+         <h2>Заказать звонок</h2>
+         <form class="questions-form">
+            <span>Просто заполните форму ниже:</span>
+            <label><input type="text" name="name" placeholder="Ваше имя" class="g-input" required="required"></label>
+            <label><input type="text" name="phone" placeholder="Телефон" class="g-input" required="required"></label>
+            <div class="check-item">
+               <label>
+                  <input type="checkbox" class="g-checkbox">
+                  <span>Нажимая на кнопку ЗАКАЗАТЬ ЗВОНОК, я даю 
+                     <a href="javascript:void(0);">согласие на обработку персональных данных *</a>
+                  </span>
+               </label>
+            </div>
+            <label><button type="submit" class="g-btn">Заказать звонок</button></label>
+         </form>
+      </div>
+   </div>
+
+   <!-- Slider popups -->
+   <div id="scheme__auto" class="popup popup-scheme">
+      <div class="popup-img">
+         <img src="img/i-have-car-pop-up.png" alt="У меня есть авто и я хочу работать на нём">
+      </div>
+      <div class="popup-info popup-info__text">
+         <span class="popup-info__title">У меня есть авто и я хочу<br> работать на нём</span>
+         <p class="popup-info__descr">Отличный выбор!</p>
+         <p>Для начала работы зарегистрируйтесь на короткую бесплатную консультацию (не более часа). Во время консультации мы:</p>
+         <ul>
+            <li>- регистрируем Вас в системе;</li>
+            <li>- учим пользоваться мобильным приложением;</li>
+            <li>- делимся секретами хорошего заработка;</li>
+            <li>- выпускаем Вас на линию!</li>
+         </ul>
+         <p>Да-да, Вы все правильно поняли, весь процесс оформления проходит удаленно и занимает не более часа и можно сразу выезжать на работу!</p>
+         <a href="javascript:void(0);" class="g-btn g-btn__sign">Зарегистрироватся</a>
+      </div>
+   </div>
+
+   <div id="scheme__work" class="popup popup-scheme">
+      <div class="popup-img">
+         <img src="img/i-want-to-work-pop-up.png" alt="У меня нет своего авто, но я хочу работать в Uber">
+      </div>
+      <div class="popup-info popup-info__text">
+         <span class="popup-info__title">У меня нет своего авто,<br> но я хочу работать в Uber</span>
+         <p class="popup-info__descr">Не проблема, у нас есть свой парк автомобилей специально для работы в Uber такси. Просто зарегистрируйтесь, а все остальное мы сделаем сами.</p>
+         <p>Все, что нужно для начала работы - оформить арендное авто! Пока будет идти процесс оформления - научим Вас пользоваться мобильным приложением от Uber, и подготовим к выезду на линию.</p>
+         <p>Все верно, весь процесс оформления занимает не более часа и проходит удаленно в телефонном режиме, после чего можно сразу же приступать к работе!</p>
+         <a href="javascript:void(0);" class="g-btn g-btn__sign">Зарегистрироватся</a>
+      </div>
+      <span class="popup-close"></span>
+   </div>
+
+   <div id="scheme__rent" class="popup popup-scheme">
+      <div class="popup-img">
+         <img src="img/car-for-rent-pop-up.png" alt="Я хотел бы сдавать свою машину в аренду">
+      </div>
+      <div class="popup-info popup-info__text">
+         <span class="popup-info__title">Я хотел бы сдавать свою<br> машину в аренду</span>
+         <p class="popup-info__descr">Как хорошо, что мы нашли Вас!</p>
+         <p>Сдайте авто в прокат и зарабатывайте не вставая с дивана! К нам на работу часто приходят водители без собственного авто. Благодаря аренде авто работать могут все.</p>
+         <p>Можете не переживать, с Вашим авто ничего не случится, вся ответственность за него ложится на водителя. Мы гарантируем стабильные выплаты за использование Вашего транспортного средства и его техническую исправность.</p>
+         <a href="javascript:void(0);" class="g-btn g-btn__sign">Зарегистрироватся</a>
+      </div>
+      <span class="popup-close"></span>
+   </div>
+</section>
+
+<!-- Popup end -->
+
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
-<!-- <script src="js/slick.min.js"></script> -->
-
+<script src="js/jquery.fancybox.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
