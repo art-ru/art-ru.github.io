@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('.g-btn, .confident-btn').magnificPopup({
+	$('.popup-btn').magnificPopup({
 		tClose: 'Закрыть',
 	});
 });

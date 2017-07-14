@@ -134,11 +134,13 @@ h1, h2 {
 
 h1 {
   font-family: "Lato-Bold";
+  font-weight: 700;
   color: #ffffff;
 }
 
 h2 {
   font-family: "Lato-Regular";
+  font-weight: 400;
   color: #24bdd9;
 }
 
@@ -782,7 +784,7 @@ label:last-child {
 
 @media screen and (max-width: 900px) {
   .popup-scheme .popup-img, .popup-scheme .popup-info__text {
-    height: 525px;
+    height: 480px;
   }
 }
 
@@ -845,16 +847,18 @@ label:last-child {
     max-height: none;
   }
   .popup-scheme .popup-img, .popup-scheme .popup-info__text {
-    height: 0;
+    height: 100%;
   }
   .popup-info__text {
-    min-height: 510px;
+    min-height: 515px;
   }
   .popup-info__text a {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    position: static;
+    display: block;
+    text-align: center;
+    margin: 30px auto 0;
+    width: 100%;
+    max-width: 240px;
   }
 }
 
@@ -876,14 +880,5 @@ label:last-child {
   }
   .popup-img {
     height: 290px;
-  }
-  .popup-info__text {
-    min-height: 550px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .popup-info__text {
-    min-height: 590px;
   }
 }
