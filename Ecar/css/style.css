@@ -290,7 +290,7 @@ label:last-child {
   margin: 0;
   width: 100%;
   max-width: 335px;
-  padding-right: 20px;
+  padding-right: 5px;
   padding-left: 22px;
 }
 
@@ -800,14 +800,18 @@ label:last-child {
     top: -2px;
   }
   .how-to-earn img {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     min-height: 0;
-    height: 200px;
+    height: 235px;
   }
   .how-to-earn__img {
     min-height: 0;
   }
   .how-to-earn p:last-child {
-    padding-bottom: 230px;
+    padding-bottom: 275px;
   }
   .partners-list li {
     margin-bottom: 15px;
@@ -841,7 +845,7 @@ label:last-child {
     max-height: none;
   }
   .popup-scheme .popup-img, .popup-scheme .popup-info__text {
-    height: auto;
+    height: 0;
   }
   .popup-info__text {
     min-height: 510px;
@@ -861,6 +865,9 @@ label:last-child {
   .header-phone {
     margin-left: 0;
   }
+  .appstore-list ul li {
+    margin-right: 10px;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -870,13 +877,13 @@ label:last-child {
   .popup-img {
     height: 290px;
   }
-  .popup-info {
-    height: 0;
-  }
   .popup-info__text {
-    min-height: 647px;
+    min-height: 550px;
   }
-  .confident-text {
-    overflow-x: visible;
+}
+
+@media screen and (max-width: 320px) {
+  .popup-info__text {
+    min-height: 590px;
   }
 }
