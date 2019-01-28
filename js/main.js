@@ -131,6 +131,10 @@ $(document).ready(function(){
 
 }); //end ready
 
+document.body.addEventListener('contextmenu', function(e){
+	e.preventDefault();
+});
+
 
 // Progress Bar
 
@@ -146,3 +150,4 @@ function textScroll(){
 	
 	document.getElementById('progress-line').style.width = scrolled + '%';
 };
+
